@@ -21,9 +21,9 @@ export default function MovieDetail() {
                 <img src={`${serverAddress}/images/${movie.image}`} className="card-img-top" alt={movie.title} />
                 <div className="card-body">
                     <h1 className="card-title">{movie.title}</h1>
-                    <p><strong>Regista:</strong> {movie.director}</p>
-                    <p><strong>Genere:</strong> {movie.genre}</p>
-                    <p><strong>Anno:</strong> {movie.release_year}</p>
+                    <p><strong>Director:</strong> {movie.director}</p>
+                    <p><strong>Genre:</strong> {movie.genre}</p>
+                    <p><strong>Year</strong> {movie.release_year}</p>
                     <p className="card-text">{movie.abstract}</p>
                 </div>
             </div>

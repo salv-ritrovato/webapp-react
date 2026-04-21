@@ -25,14 +25,18 @@ export default function HomePage() {
 
             <section>
                 <div className="container">
-                    <h2 className="text-muted">Movies</h2>
-                    <div className="row">
+                    <p className="movies-section">Movies</p>
+                    <div className="movies-grid">
                         {movies.map(movie => (
-                            <div className="col" key={movie.id}>
-                                <h2>{movie.title}</h2>
-                                <p>{movie.genre}</p>
-                                <p>{movie.release_year}</p>
-                                <Link to={`/movies/${movie.id}`}>Details</Link>
+                            <div className="movie-card" key={movie.id}>
+                                <span className="movie-badge">{movie.genre}</span>
+                                <img src={`${import.meta.env.VITE_BACKEND_ADDRESS}/images/${movie.image}`} alt={movie.title} className="movie-image"
+                                />
+                                <p className="movie-title">{movie.title}</p>
+                                <p className="movie-year">{movie.release_year}</p>
+                                <Link to={`/movies/${movie.id}`} className="movie-link">
+                                    Details <span>→</span>
+                                </Link>
                             </div>
                         ))}
                     </div>
