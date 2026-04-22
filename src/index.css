@@ -4,7 +4,7 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #888;
+    color: #666;
     margin: 0 0 1rem;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .movie-card {
-    background: #fff;
-    border: 0.5px solid #e0e0e0;
+    background: #1a1a1a;
+    border: 0.5px solid #2e2e2e;
     border-radius: 12px;
     padding: 1rem 1.1rem 0.85rem;
     display: flex;
@@ -26,17 +26,17 @@
 }
 
 .movie-card:hover {
-    border-color: #bbb;
+    border-color: #444;
 }
 
-.movie-badge {
+.movie-genrebadge {
     display: inline-flex;
     font-size: 11px;
     font-weight: 500;
     padding: 2px 8px;
     border-radius: 999px;
-    background: #f5f5f5;
-    color: #666;
+    background: #252525;
+    color: #888;
     width: fit-content;
 }
 
@@ -45,24 +45,25 @@
     font-weight: 500;
     margin: 0;
     line-height: 1.3;
+    color: #e8e8e8;
 }
 
 .movie-year {
     font-size: 13px;
-    color: #888;
+    color: #666;
     margin: 0;
 }
 
-.movie-link {
+.movie-details {
     margin-top: auto;
     padding-top: 10px;
     font-size: 13px;
     font-weight: 500;
-    color: #1a73e8;
+    color: #4d9fef;
     text-decoration: none;
 }
 
-.movie-link:hover {
+.movie-details:hover {
     opacity: 0.75;
 }
 

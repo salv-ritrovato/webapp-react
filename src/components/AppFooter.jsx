@@ -11,7 +11,7 @@ export default function AppFooter() {
                     </div>
 
                     <div className="col-md-4">
-                        <h6 className="fw-semibold mb-2 text-uppercase fs-xs booleansmall">Navigation</h6>
+                        <h6 className="fw-semibold mb-2 text-uppercase fs-xs booleansmall">Our Pages</h6>
                         <ul className="list-unstyled small">
                             <li><a href="/" className="text-secondary text-decoration-none">Home</a></li>
                             <li><a href="/movies" className="text-secondary text-decoration-none">Movies</a></li>
@@ -20,7 +20,7 @@ export default function AppFooter() {
                     </div>
 
                     <div className="col-md-4">
-                        <h6 className="fw-semibold mb-2 text-uppercase fs-xs booleansmall">Contact</h6>
+                        <h6 className="fw-semibold mb-2 text-uppercase fs-xs booleansmall">Contacts</h6>
                         <ul className="list-unstyled small text-secondary">
                             <li>📧 info@mybooleanmovies.com</li>
                         </ul>

@@ -29,12 +29,12 @@ export default function HomePage() {
                     <div className="movies-grid">
                         {movies.map(movie => (
                             <div className="movie-card" key={movie.id}>
-                                <span className="movie-badge">{movie.genre}</span>
+                                <span className="movie-genrebadge">{movie.genre}</span>
                                 <img src={`${import.meta.env.VITE_BACKEND_ADDRESS}/images/${movie.image}`} alt={movie.title} className="movie-image"
                                 />
                                 <p className="movie-title">{movie.title}</p>
                                 <p className="movie-year">{movie.release_year}</p>
-                                <Link to={`/movies/${movie.id}`} className="movie-link">
+                                <Link to={`/movies/${movie.id}`} className="movie-details">
                                     Details <span>→</span>
                                 </Link>
                             </div>
