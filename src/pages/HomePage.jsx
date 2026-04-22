@@ -26,17 +26,24 @@ export default function HomePage() {
             <section>
                 <div className="container">
                     <p className="movies-section">Movies</p>
-                    <div className="movies-grid">
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-5 g-4">
                         {movies.map(movie => (
-                            <div className="movie-card" key={movie.id}>
-                                <span className="movie-genrebadge">{movie.genre}</span>
-                                <img src={`${import.meta.env.VITE_BACKEND_ADDRESS}/images/${movie.image}`} alt={movie.title} className="movie-image"
-                                />
-                                <p className="movie-title">{movie.title}</p>
-                                <p className="movie-year">{movie.release_year}</p>
-                                <Link to={`/movies/${movie.id}`} className="movie-details">
-                                    Details <span>→</span>
-                                </Link>
+                            <div className="col" key={movie.id}>
+                                <div className="card h-100">
+                                    <span className="badge bg-secondary position-absolute m-2">{movie.genre}</span>
+                                    <img
+                                        src={`${import.meta.env.VITE_BACKEND_ADDRESS}/images/${movie.image}`}
+                                        alt={movie.title}
+                                        className="card-img-top"
+                                    />
+                                    <div className="card-body">
+                                        <p className="card-title fw-bold mb-1">{movie.title}</p>
+                                        <p className="card-text text-muted">{movie.release_year}</p>
+                                        <Link to={`/movies/${movie.id}`} className="btn btn-primary btn-sm">
+                                            Details <span>→</span>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

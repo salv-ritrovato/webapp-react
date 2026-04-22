@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function AppHeader() {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <nav className="navbar navbar-expand-lg bg-dark navbar-dark border-bottom">
             <div className="container">
                 <Link className="navbar-brand fw-semibold" to="/"><i class="bi bi-film"></i> MyBooleanMovies</Link>
 
