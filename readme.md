@@ -23,3 +23,11 @@
 
 ### Bonus
 - Curare l’aspetto estetico della vostra applicazione
+
+
+-------------------------------------------------------------------------------------------------
+
+# MILESTONE 2
+- Creiamo un componente che contenga il form per le recensioni
+- Inseriamo questo componente nella pagina di dettaglio del film
+- All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre

@@ -36,10 +36,10 @@ export default function HomePage() {
                                         alt={movie.title}
                                         className="card-img-top"
                                     />
-                                    <div className="card-body">
+                                    <div className="card-body d-flex flex-column">
                                         <p className="card-title fw-bold mb-1">{movie.title}</p>
                                         <p className="card-text text-muted">{movie.release_year}</p>
-                                        <Link to={`/movies/${movie.id}`} className="btn btn-primary btn-sm">
+                                        <Link to={`/movies/${movie.id}`} className="btn btn-secondary btn-sm mt-auto">
                                             Details <span>→</span>
                                         </Link>
                                     </div>
