@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layout/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import MovieDetail from "./pages/MovieDetail";
-import { LoaderProvider } from "./contexts/LoaderContext";
+import { LoaderProvider } from "./context/LoaderContext";
 
 function App() {
   return (
