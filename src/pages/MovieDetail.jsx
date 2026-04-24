@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ReviewForm from '../components/ReviewForm';
+import Loader from '../components/Loader';
 
 export default function MovieDetail() {
     const { id } = useParams();
@@ -18,7 +19,7 @@ export default function MovieDetail() {
             .then((data) => setReviews(data));
     }, [id]); //
 
-    if (!movie) return <p>Page loading...</p>;
+    if (!movie) return <Loader />;
 
     return (
         <div className="container mt-5">
