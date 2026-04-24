@@ -6,11 +6,16 @@ export default function MovieDetail() {
     const { id } = useParams();
     const serverAddress = import.meta.env.VITE_BACKEND_ADDRESS;
     const [movie, setMovie] = useState(null);
+    const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
         fetch(`${serverAddress}/movies/${id}`)
             .then((response) => response.json())
             .then((data) => setMovie(data));
+
+        fetch(`${serverAddress}/movies/${id}/reviews`)
+            .then((response) => response.json())
+            .then((data) => setReviews(data));
     }, [id]); //
 
     if (!movie) return <p>Page loading...</p>;
@@ -35,7 +40,7 @@ export default function MovieDetail() {
                     </div>
                 </div>
             </div>
-            <ReviewForm movieId={id} />
+            <ReviewForm movieId={id} reviews={reviews} setReviews={setReviews} />
         </div>
     );
 }
