@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import { useLoader } from "../context/LoaderContext";
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
     const [movies, setMovies] = useState([]);
     const { setIsLoading } = useLoader();
@@ -12,8 +16,8 @@ export default function HomePage() {
             .then((data) => {
                 setMovies(data);
                 setIsLoading(false);
-            }, []);
-    });
+            });
+    }, []);
 
     return (
         <>
