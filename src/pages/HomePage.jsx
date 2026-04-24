@@ -1,15 +1,19 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
 export default function HomePage() {
     const [movies, setMovies] = useState([]);
+    const { setIsLoading } = useLoader();
 
     useEffect(() => {
         const apiUrl = import.meta.env.VITE_BACKEND_ADDRESS + "/movies";
+
+        setIsLoading(true);
+
         fetch(apiUrl)
             .then((response) => response.json())
-            .then((data) => setMovies(data));
-    }, []);
+            .then((data) => {
+                setMovies(data);
+                setIsLoading(false);
+            }, []);
+    });
 
     return (
         <>
