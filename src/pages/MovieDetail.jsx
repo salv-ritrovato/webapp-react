@@ -1,25 +1,31 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ReviewForm from '../components/ReviewForm';
-import Loader from '../components/Loader';
+import { useLoader } from '../context/LoaderContext';
 
 export default function MovieDetail() {
     const { id } = useParams();
     const serverAddress = import.meta.env.VITE_BACKEND_ADDRESS;
     const [movie, setMovie] = useState(null);
     const [reviews, setReviews] = useState([]);
+    const { setIsLoading } = useLoader();
 
     useEffect(() => {
+        setIsLoading(true);
+
         fetch(`${serverAddress}/movies/${id}`)
             .then((response) => response.json())
             .then((data) => setMovie(data));
 
         fetch(`${serverAddress}/movies/${id}/reviews`)
             .then((response) => response.json())
-            .then((data) => setReviews(data));
-    }, [id]); //
+            .then((data) => {
+                setReviews(data);
+                setIsLoading(false);
+            });
+    }, [id]);
 
-    if (!movie) return <Loader />;
+    if (!movie) return null;
 
     return (
         <div className="container mt-5">
